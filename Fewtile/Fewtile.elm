@@ -6,7 +6,9 @@ import Dict (diff)
 import Time (every)
 import Window as Window
 
+
 import Fewtile.Board
+import Fewtile.Easing as Easing
 
 -- (Ord k, Eq v) =>
 data Op k v = Add k v | Remove k | Change k v v

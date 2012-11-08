@@ -265,6 +265,45 @@ try{
 
 for(var i in Elm) { this[i] = Elm[i]; }
 Elm.Fewtile=Elm.Fewtile || {};
+if (Elm.Fewtile.Easing) throw "Module name collision, 'Fewtile.Easing' is already defined."; 
+Elm.Fewtile.Easing=function(){
+ try{if (!(Elm.Prelude instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Prelude' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ function Easing_0(a1){
+  return ["Easing",a1];};
+ var bound_3=clamp(0)(1);
+ var floatCeil_5=function(x){
+  return toFloat(ceiling(x));};
+ var linear_6=Easing_0(id);
+ var exponential_7=Easing_0(function(x_19){
+  return (x_19*x_19);});
+ var inverse_8=Easing_0(function(x_20){
+  return floatCeil_5((1/x_20));});
+ function easingPercent_1(Easing$f_9){
+  return function(total_10){
+   return function(elapsed_11){
+    return function(){
+    switch(Easing$f_9[0]){
+     case "Easing":
+     return Easing$f_9[1]((elapsed_11/total_10));
+    }
+    throw "Non-exhaustive pattern match in case";}();};};};
+ function easingDelta_2(e_13){
+  return function(total_14){
+   return function(elapsed_15){
+    return function(src_16){
+     return function(dest_17){
+      return (src_16+(easingPercent_1(e_13)(total_14)(elapsed_15)*(dest_17-src_16)));};};};};};
+ function beas_4(f_18){
+  return Easing_0(function(x){
+   return bound_3(f_18(x));});};
+ return {Easing:Easing_0,easingPercent:easingPercent_1,easingDelta:easingDelta_2,bound:bound_3,beas:beas_4,floatCeil:floatCeil_5,linear:linear_6,exponential:exponential_7,inverse:inverse_8};}();
+Elm.main=function(){
+ return Elm.Fewtile.Easing.main;};
+} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Easing module:<br/>' + e + '</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
+try{
+
+for(var i in Elm) { this[i] = Elm[i]; }
+Elm.Fewtile=Elm.Fewtile || {};
 if (Elm.Fewtile.Fewtile) throw "Module name collision, 'Fewtile.Fewtile' is already defined."; 
 Elm.Fewtile.Fewtile=function(){
  try{if (!(Elm.Prelude instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Prelude' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
@@ -286,6 +325,8 @@ Elm.Fewtile.Fewtile=function(){
  for(var i in Elm.Fewtile.Board){
   if (hiddenVars.indexOf(i) >= 0) continue;
   this[i]=Elm.Fewtile.Board[i];}
+ try{if (!(Elm.Fewtile.Easing instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Fewtile.Easing' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var Easing=Elm.Fewtile.Easing;
  function Add_0(a1){
   return function(a2){
    return ["Add",a1,a2];};};
