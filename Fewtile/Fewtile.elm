@@ -6,6 +6,8 @@ import Dict (diff)
 import Time (every)
 import Window as Window
 
+import Fewtile.Board
+
 -- (Ord k, Eq v) =>
 data Op k v = Add k v | Remove k | Change k v v
 
@@ -22,7 +24,7 @@ opValue (Change _ _ v ) = Just v
 -- index :: (v -> k) -> [v] -> Dict k v
 index f xs = fromList $ zip (map f xs) xs
 
--- diffo :: Dict k v -> [v] -> (Dict k v, [Op k v])
+-- diffo :: (Ord k, Eq v) => Dict k v -> [v] -> (Dict k v, [Op k v])
 diffo ixer olds =
   let (addChanges, nus) = foldl
     (\(m, ops) nu ->
@@ -40,7 +42,7 @@ diffo ixer olds =
   in let removes = map (\(k, v) -> Remove k) (toList (olds, nus))
   in (removes ++ addChanges, nus)
 
-data BoardState = Stable | Animating
+
 
 -- a -> b -> a
 const x _ = x
