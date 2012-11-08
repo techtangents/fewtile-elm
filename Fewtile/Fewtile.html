@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Fewtile.Fewtile</title><style type="text/css">html,head,body { padding:0; margin:0; }body { font-family: helvetica, arial, sans-serif; }</style></head><body><script type="text/javascript" src="elm-runtime-0.5.0.1.js"></script><script type="text/javascript">
+try{
+
+for(var i in Elm) { this[i] = Elm[i]; }
+Elm.Fewtile=Elm.Fewtile || {};
+if (Elm.Fewtile.Fewtile) throw "Module name collision, 'Fewtile.Fewtile' is already defined."; 
+Elm.Fewtile.Fewtile=function(){
+ try{if (!(Elm.Prelude instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Prelude' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ try{if (!(Elm.List instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'List' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var fromList=Elm.List.fromList;
+ try{if (!(Elm.HTTP instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'HTTP' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var hiddenVars=[];
+ for(var i in Elm.HTTP){
+  if (hiddenVars.indexOf(i) >= 0) continue;
+  this[i]=Elm.HTTP[i];}
+ try{if (!(Elm.Dict instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Dict' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var diff=Elm.Dict.diff;
+ try{if (!(Elm.Time instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Time' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var every=Elm.Time.every;
+ try{if (!(Elm.Window instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Window' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
+ var Window=Elm.Window;
+ function Add_0(a1){
+  return function(a2){
+   return ["Add",a1,a2];};};
+ function Remove_1(a1){
+  return ["Remove",a1];};
+ function Change_2(a1){
+  return function(a2){
+   return function(a3){
+    return ["Change",a1,a2,a3];};};};
+ var Stable_11=["Stable"];
+ var Animating_12=["Animating"];
+ var lc_15=function(x){
+  return lift(const_13(x));};
+ var lt_16=function(x){
+  return lift(tsonc_14(x));};
+ var getty2_19=sendGet(lc_15(Value.str("/api/json?tree=jobs[name,color]"))(every(3)));
+ var main_23=lift3(collage)(Window.width)(Window.height)(constant(["Cons",filled(rgb(0)(255)(0))(rect(100)(100)(["Tuple2",150,150])),["Nil"]]));
+ function opKey_5(Add$k__24){
+  return function(){
+  switch(Add$k__24[0]){
+   case "Add":
+   return Add$k__24[1];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function opKey_5(Remove$k_26){
+  return function(){
+  switch(Remove$k_26[0]){
+   case "Remove":
+   return Remove$k_26[1];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function opKey_5(Change$k___28){
+  return function(){
+  switch(Change$k___28[0]){
+   case "Change":
+   return Change$k___28[1];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function opValue_8(Add$_v_30){
+  return function(){
+  switch(Add$_v_30[0]){
+   case "Add":
+   return Just(Add$_v_30[2]);
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function opValue_8(Remove$__32){
+  return function(){
+  switch(Remove$__32[0]){
+   case "Remove":
+   return Nothing;
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function opValue_8(Change$__v_33){
+  return function(){
+  switch(Change$__v_33[0]){
+   case "Change":
+   return Just(Change$__v_33[3]);
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function index_9(f_35){
+  return function(xs_36){
+   return fromList(zip(map(f_35)(xs_36))(xs_36));};};
+ function diffo_10(ixer_37){
+  return function(olds_38){
+   return function(){
+    var Tuple2$addChangesnus_39=foldl(function(Tuple2$mops_42){
+     return function(nu_43){
+      return function(){
+      switch(Tuple2$mops_42[0]){
+       case "Tuple2":
+       return function(){
+        var k_46=ixer_37(nu_43);
+        return function(){
+         var old_47=lookup(k_46)(olds_38);
+         return maybe(["Tuple2",insert(Tuple2$mops_42[1])(k_46)(nu_43),Add_0(k_46)(nu_43)])((eq(old_47,nu_43)?["Tuple2",Tuple2$mops_42[1],Tuple2$mops_42[2]]:["Tuple2",insert(Tuple2$mops_42[1])(k_46)(nu_43),["Cons",Change_2(k_46)(nu_43),Tuple2$mops_42[2]]]));}();}();
+      }
+      throw "Non-exhaustive pattern match in case";}();};})(["Tuple2",empty,["Nil"]]);
+    var addChanges_40=function(){
+    switch(Tuple2$addChangesnus_39[0]){
+     case "Tuple2":
+     return Tuple2$addChangesnus_39[1];
+    }
+    throw "Non-exhaustive pattern match in case";}();
+    var nus_41=function(){
+    switch(Tuple2$addChangesnus_39[0]){
+     case "Tuple2":
+     return Tuple2$addChangesnus_39[2];
+    }
+    throw "Non-exhaustive pattern match in case";}();
+    return function(){
+     var removes_52=map(function(Tuple2$kv_53){
+      return function(){
+      switch(Tuple2$kv_53[0]){
+       case "Tuple2":
+       return Remove_1(Tuple2$kv_53[1]);
+      }
+      throw "Non-exhaustive pattern match in case";}();})(toList(["Tuple2",olds_38,nus_41]));
+     return ["Tuple2",Value.append(removes_52,addChanges_40),nus_41];}();}();};};
+ function const_13(x_56){
+  return function(__57){
+   return x_56;};};
+ function tsonc_14(__58){
+  return function(x_59){
+   return x_59;};};
+ function mapPair_17(f_60){
+  return function(Tuple2$ab_61){
+   return function(){
+   switch(Tuple2$ab_61[0]){
+    case "Tuple2":
+    return ["Tuple2",f_60(Tuple2$ab_61[1]),f_60(Tuple2$ab_61[2])];
+   }
+   throw "Non-exhaustive pattern match in case";}();};};
+ function showPair_18(p_64){
+  return function(){
+   var Tuple2$ab_65=mapPair_17(show)(p_64);
+   var a_66=function(){
+   switch(Tuple2$ab_65[0]){
+    case "Tuple2":
+    return Tuple2$ab_65[1];
+   }
+   throw "Non-exhaustive pattern match in case";}();
+   var b_67=function(){
+   switch(Tuple2$ab_65[0]){
+    case "Tuple2":
+    return Tuple2$ab_65[2];
+   }
+   throw "Non-exhaustive pattern match in case";}();
+   return Value.append(Value.str("("),Value.append(a_66,Value.append(Value.str(","),Value.append(b_67,Value.str(")")))));}();};
+ function printCode_20(a_72){
+  return function(){
+  switch(a_72[0]){
+   case "Failure":
+   return Value.append(show(a_72[1]),a_72[2]);
+   case "Success":
+   return a_72[1];
+   case "Waiting":
+   return Value.str("...");
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function fst_21(Tuple2$a__76){
+  return function(){
+  switch(Tuple2$a__76[0]){
+   case "Tuple2":
+   return Tuple2$a__76[1];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function snd_22(Tuple2$_a_78){
+  return function(){
+  switch(Tuple2$_a_78[0]){
+   case "Tuple2":
+   return Tuple2$_a_78[2];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ return {Add:Add_0,Remove:Remove_1,Change:Change_2,opKey:opKey_5,opKey:opKey_5,opKey:opKey_5,opValue:opValue_8,opValue:opValue_8,opValue:opValue_8,index:index_9,diffo:diffo_10,Stable:Stable_11,Animating:Animating_12,const:const_13,tsonc:tsonc_14,lc:lc_15,lt:lt_16,mapPair:mapPair_17,showPair:showPair_18,getty2:getty2_19,printCode:printCode_20,fst:fst_21,snd:snd_22,main:main_23};}();
+Elm.main=function(){
+ return Elm.Fewtile.Fewtile.main;};
+} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Fewtile module:<br/>' + e + '<br/><br/>The problem may stem from an improper usage of:<br/>empty, every, fromList, insert, lookup, maybe, toList</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}</script><div id="widthChecker" style="width:100%; height:1px; position:absolute; top:-1px;"></div><div id="content"></div><script type="text/javascript">Dispatcher.initialize()</script><noscript><p>(,)</p><p>/api/json?tree=jobs[name,color]</p><p>...</p></noscript></body></html>
