@@ -4,7 +4,7 @@ import Fewtile.Tile(Tile)
 import Fewtile.Tile as Tile
 
 data Board =
-  Stable [Tile] -- current set of tiles
+    Stable           [Tile]        -- cur
   | Animating [Tile] [Tile] [Tile] -- src current dest
 
 stabilizeBoard (Stable ts) = Stable ts

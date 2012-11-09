@@ -11,76 +11,84 @@ Elm.Fewtile.Tile=function(){
   return function(a2){
    return function(a3){
     return function(a4){
-     return ["Tile",a1,a2,a3,a4];};};};};
- function tileId_1(Tile$q____9){
+     return function(a5){
+      return ["Tile",a1,a2,a3,a4,a5];};};};};};
+ function tileId_1(Tile$q_____10){
   return function(){
-  switch(Tile$q____9[0]){
+  switch(Tile$q_____10[0]){
    case "Tile":
-   return Tile$q____9[1];
+   return Tile$q_____10[1];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileText_2(Tile$_q___11){
+ function tileText_2(Tile$_q____12){
   return function(){
-  switch(Tile$_q___11[0]){
+  switch(Tile$_q____12[0]){
    case "Tile":
-   return Tile$_q___11[2];
+   return Tile$_q____12[2];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileOrigin_3(Tile$__q__13){
+ function tileOrigin_3(Tile$__q___14){
   return function(){
-  switch(Tile$__q__13[0]){
+  switch(Tile$__q___14[0]){
    case "Tile":
-   return Tile$__q__13[3];
+   return Tile$__q___14[3];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileSize_4(Tile$___q_15){
+ function tileSize_4(Tile$___q__16){
   return function(){
-  switch(Tile$___q_15[0]){
+  switch(Tile$___q__16[0]){
    case "Tile":
-   return Tile$___q_15[4];
+   return Tile$___q__16[4];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileX_5(Tile$__Tuple2$q___17){
+ function tileColor_5(Tile$____q_18){
   return function(){
-  switch(Tile$__Tuple2$q___17[0]){
+  switch(Tile$____q_18[0]){
    case "Tile":
-   switch(Tile$__Tuple2$q___17[3][0]){
+   return Tile$____q_18[5];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function tileX_6(Tile$__Tuple2$q____20){
+  return function(){
+  switch(Tile$__Tuple2$q____20[0]){
+   case "Tile":
+   switch(Tile$__Tuple2$q____20[3][0]){
     case "Tuple2":
-    return Tile$__Tuple2$q___17[3][1];
+    return Tile$__Tuple2$q____20[3][1];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileY_6(Tile$__Tuple2$_q__19){
+ function tileY_7(Tile$__Tuple2$_q___22){
   return function(){
-  switch(Tile$__Tuple2$_q__19[0]){
+  switch(Tile$__Tuple2$_q___22[0]){
    case "Tile":
-   switch(Tile$__Tuple2$_q__19[3][0]){
+   switch(Tile$__Tuple2$_q___22[3][0]){
     case "Tuple2":
-    return Tile$__Tuple2$_q__19[3][2];
+    return Tile$__Tuple2$_q___22[3][2];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileWidth_7(Tile$___Tuple2$q__21){
+ function tileWidth_8(Tile$___Tuple2$q___24){
   return function(){
-  switch(Tile$___Tuple2$q__21[0]){
+  switch(Tile$___Tuple2$q___24[0]){
    case "Tile":
-   switch(Tile$___Tuple2$q__21[4][0]){
+   switch(Tile$___Tuple2$q___24[4][0]){
     case "Tuple2":
-    return Tile$___Tuple2$q__21[4][1];
+    return Tile$___Tuple2$q___24[4][1];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileHeight_8(Tile$___Tuple2$_q_23){
+ function tileHeight_9(Tile$___Tuple2$_q__26){
   return function(){
-  switch(Tile$___Tuple2$_q_23[0]){
+  switch(Tile$___Tuple2$_q__26[0]){
    case "Tile":
-   switch(Tile$___Tuple2$_q_23[4][0]){
+   switch(Tile$___Tuple2$_q__26[4][0]){
     case "Tuple2":
-    return Tile$___Tuple2$_q_23[4][2];
+    return Tile$___Tuple2$_q__26[4][2];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- return {Tile:Tile_0,tileId:tileId_1,tileText:tileText_2,tileOrigin:tileOrigin_3,tileSize:tileSize_4,tileX:tileX_5,tileY:tileY_6,tileWidth:tileWidth_7,tileHeight:tileHeight_8};}();
+ return {Tile:Tile_0,tileId:tileId_1,tileText:tileText_2,tileOrigin:tileOrigin_3,tileSize:tileSize_4,tileColor:tileColor_5,tileX:tileX_6,tileY:tileY_7,tileWidth:tileWidth_8,tileHeight:tileHeight_9};}();
 Elm.main=function(){
  return Elm.Fewtile.Tile.main;};
 } catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Tile module:<br/>' + e + '</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
@@ -95,76 +103,84 @@ Elm.Fewtile.Tile=function(){
   return function(a2){
    return function(a3){
     return function(a4){
-     return ["Tile",a1,a2,a3,a4];};};};};
- function tileId_1(Tile$q____9){
+     return function(a5){
+      return ["Tile",a1,a2,a3,a4,a5];};};};};};
+ function tileId_1(Tile$q_____10){
   return function(){
-  switch(Tile$q____9[0]){
+  switch(Tile$q_____10[0]){
    case "Tile":
-   return Tile$q____9[1];
+   return Tile$q_____10[1];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileText_2(Tile$_q___11){
+ function tileText_2(Tile$_q____12){
   return function(){
-  switch(Tile$_q___11[0]){
+  switch(Tile$_q____12[0]){
    case "Tile":
-   return Tile$_q___11[2];
+   return Tile$_q____12[2];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileOrigin_3(Tile$__q__13){
+ function tileOrigin_3(Tile$__q___14){
   return function(){
-  switch(Tile$__q__13[0]){
+  switch(Tile$__q___14[0]){
    case "Tile":
-   return Tile$__q__13[3];
+   return Tile$__q___14[3];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileSize_4(Tile$___q_15){
+ function tileSize_4(Tile$___q__16){
   return function(){
-  switch(Tile$___q_15[0]){
+  switch(Tile$___q__16[0]){
    case "Tile":
-   return Tile$___q_15[4];
+   return Tile$___q__16[4];
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileX_5(Tile$__Tuple2$q___17){
+ function tileColor_5(Tile$____q_18){
   return function(){
-  switch(Tile$__Tuple2$q___17[0]){
+  switch(Tile$____q_18[0]){
    case "Tile":
-   switch(Tile$__Tuple2$q___17[3][0]){
+   return Tile$____q_18[5];
+  }
+  throw "Non-exhaustive pattern match in case";}();};
+ function tileX_6(Tile$__Tuple2$q____20){
+  return function(){
+  switch(Tile$__Tuple2$q____20[0]){
+   case "Tile":
+   switch(Tile$__Tuple2$q____20[3][0]){
     case "Tuple2":
-    return Tile$__Tuple2$q___17[3][1];
+    return Tile$__Tuple2$q____20[3][1];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileY_6(Tile$__Tuple2$_q__19){
+ function tileY_7(Tile$__Tuple2$_q___22){
   return function(){
-  switch(Tile$__Tuple2$_q__19[0]){
+  switch(Tile$__Tuple2$_q___22[0]){
    case "Tile":
-   switch(Tile$__Tuple2$_q__19[3][0]){
+   switch(Tile$__Tuple2$_q___22[3][0]){
     case "Tuple2":
-    return Tile$__Tuple2$_q__19[3][2];
+    return Tile$__Tuple2$_q___22[3][2];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileWidth_7(Tile$___Tuple2$q__21){
+ function tileWidth_8(Tile$___Tuple2$q___24){
   return function(){
-  switch(Tile$___Tuple2$q__21[0]){
+  switch(Tile$___Tuple2$q___24[0]){
    case "Tile":
-   switch(Tile$___Tuple2$q__21[4][0]){
+   switch(Tile$___Tuple2$q___24[4][0]){
     case "Tuple2":
-    return Tile$___Tuple2$q__21[4][1];
+    return Tile$___Tuple2$q___24[4][1];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- function tileHeight_8(Tile$___Tuple2$_q_23){
+ function tileHeight_9(Tile$___Tuple2$_q__26){
   return function(){
-  switch(Tile$___Tuple2$_q_23[0]){
+  switch(Tile$___Tuple2$_q__26[0]){
    case "Tile":
-   switch(Tile$___Tuple2$_q_23[4][0]){
+   switch(Tile$___Tuple2$_q__26[4][0]){
     case "Tuple2":
-    return Tile$___Tuple2$_q_23[4][2];
+    return Tile$___Tuple2$_q__26[4][2];
    }break;
   }
   throw "Non-exhaustive pattern match in case";}();};
- return {Tile:Tile_0,tileId:tileId_1,tileText:tileText_2,tileOrigin:tileOrigin_3,tileSize:tileSize_4,tileX:tileX_5,tileY:tileY_6,tileWidth:tileWidth_7,tileHeight:tileHeight_8};}();
+ return {Tile:Tile_0,tileId:tileId_1,tileText:tileText_2,tileOrigin:tileOrigin_3,tileSize:tileSize_4,tileColor:tileColor_5,tileX:tileX_6,tileY:tileY_7,tileWidth:tileWidth_8,tileHeight:tileHeight_9};}();
 Elm.main=function(){
  return Elm.Fewtile.Tile.main;};
 } catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Tile module:<br/>' + e + '</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
@@ -270,36 +286,86 @@ Elm.Fewtile.Easing=function(){
  try{if (!(Elm.Prelude instanceof Object)) throw 'module not found'; } catch(e) {throw "Module 'Prelude' is missing. Compile with --make flag or load missing module in a separate JavaScript file.";}
  function Easing_0(a1){
   return ["Easing",a1];};
- var bound_3=clamp(0)(1);
- var floatCeil_5=function(x){
+ var bound_1=clamp(0)(1);
+ var floatCeil_3=function(x){
   return toFloat(ceiling(x));};
- var linear_6=Easing_0(id);
- var exponential_7=Easing_0(function(x_19){
-  return (x_19*x_19);});
- var inverse_8=Easing_0(function(x_20){
-  return floatCeil_5((1/x_20));});
- function easingPercent_1(Easing$f_9){
-  return function(total_10){
-   return function(elapsed_11){
+ var linear_4=Easing_0(id);
+ var exponential_5=Easing_0(function(x_14){
+  return (x_14*x_14);});
+ var inverse_6=Easing_0(function(x_15){
+  return floatCeil_3((1/x_15));});
+ function beas_2(f_13){
+  return Easing_0(function(x){
+   return bound_1(f_13(x));});};
+ function easingPercent_7(Easing$f_16){
+  return function(total_17){
+   return function(elapsed_18){
     return function(){
-    switch(Easing$f_9[0]){
+    switch(Easing$f_16[0]){
      case "Easing":
-     return Easing$f_9[1]((elapsed_11/total_10));
+     return Easing$f_16[1]((elapsed_18/total_17));
     }
     throw "Non-exhaustive pattern match in case";}();};};};
- function easingDelta_2(e_13){
-  return function(total_14){
-   return function(elapsed_15){
-    return function(src_16){
-     return function(dest_17){
-      return (src_16+(easingPercent_1(e_13)(total_14)(elapsed_15)*(dest_17-src_16)));};};};};};
- function beas_4(f_18){
-  return Easing_0(function(x){
-   return bound_3(f_18(x));});};
- return {Easing:Easing_0,easingPercent:easingPercent_1,easingDelta:easingDelta_2,bound:bound_3,beas:beas_4,floatCeil:floatCeil_5,linear:linear_6,exponential:exponential_7,inverse:inverse_8};}();
+ function easingNum_8(curPc_20){
+  return function(src_21){
+   return function(dest_22){
+    return (src_21+(curPc_20*(dest_22-src_21)));};};};
+ function easingPair_9(curPc_23){
+  return function(Tuple2$xy_24){
+   return function(Tuple2$x_y__25){
+    return function(){
+    switch(Tuple2$xy_24[0]){
+     case "Tuple2":
+     return function(){
+     switch(Tuple2$x_y__25[0]){
+      case "Tuple2":
+      return ["Tuple2",easingNum_8(curPc_23)(Tuple2$xy_24[1])(Tuple2$x_y__25[1]),easingNum_8(curPc_23)(Tuple2$xy_24[2])(Tuple2$x_y__25[2])];
+     }
+     throw "Non-exhaustive pattern match in case";}();
+    }
+    throw "Non-exhaustive pattern match in case";}();};};};
+ function easingColor_10(curPc_30){
+  return function(Color$rgba_31){
+   return function(Color$r_g_b_a__32){
+    return function(){
+    switch(Color$rgba_31[0]){
+     case "Color":
+     return function(){
+     switch(Color$r_g_b_a__32[0]){
+      case "Color":
+      return function(){
+       var en_41=easingNum_8(curPc_30);
+       return Color(en_41(Color$rgba_31[1])(Color$r_g_b_a__32[1]))(en_41(Color$rgba_31[2])(Color$r_g_b_a__32[2]))(en_41(Color$rgba_31[3])(Color$r_g_b_a__32[3]))(en_41(Color$rgba_31[4])(Color$r_g_b_a__32[4]));}();
+     }
+     throw "Non-exhaustive pattern match in case";}();
+    }
+    throw "Non-exhaustive pattern match in case";}();};};};
+ function easingTile_11(curPc_42){
+  return function(Tile$idtextoriginsizecolor_43){
+   return function(Tile$__origin_size_color__44){
+    return function(){
+    switch(Tile$idtextoriginsizecolor_43[0]){
+     case "Tile":
+     return function(){
+     switch(Tile$__origin_size_color__44[0]){
+      case "Tile":
+      return function(){
+       var ep_53=easingPair_9(curPc_42);
+       return Tile(Tile$idtextoriginsizecolor_43[1])(Tile$idtextoriginsizecolor_43[2])(ep_53(Tile$idtextoriginsizecolor_43[3])(Tile$__origin_size_color__44[3]))(ep_53(Tile$idtextoriginsizecolor_43[4])(Tile$__origin_size_color__44[4]))(easingColor_10(Tile$idtextoriginsizecolor_43[5])(Tile$__origin_size_color__44[5]));}();
+     }
+     throw "Non-exhaustive pattern match in case";}();
+    }
+    throw "Non-exhaustive pattern match in case";}();};};};
+ function easingTile__12(easing_54){
+  return function(total_55){
+   return function(elapsed_56){
+    return function(tile_57){
+     return function(tile__58){
+      return easingTile_11(easingPercent_7(easing_54)(total_55)(elapsed_56))(tile_57)(tile__58);};};};};};
+ return {Easing:Easing_0,bound:bound_1,beas:beas_2,floatCeil:floatCeil_3,linear:linear_4,exponential:exponential_5,inverse:inverse_6,easingPercent:easingPercent_7,easingNum:easingNum_8,easingPair:easingPair_9,easingColor:easingColor_10,easingTile:easingTile_11,easingTile_:easingTile__12};}();
 Elm.main=function(){
  return Elm.Fewtile.Easing.main;};
-} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Easing module:<br/>' + e + '</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
+} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Easing module:<br/>' + e + '<br/><br/>The problem may stem from an improper usage of:<br/>Color, Tile</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
 try{
 
 for(var i in Elm) { this[i] = Elm[i]; }
