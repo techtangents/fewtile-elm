@@ -1,5 +1,7 @@
 module Fewtile.Easing where
 
+import Fewtile.Util.List
+
 -- Easing function for an animation.
 -- An easing is a function from % to %.
 
@@ -37,3 +39,7 @@ easingTile curPc (Tile id text origin size color) (Tile _ _ origin' size' color'
 
 easingTile' easing total elapsed tile tile' =
   easingTile (easingPercent easing total elapsed) tile tile'
+
+easingTiles' easing total elapsed =
+  liftList2 (easingTile' easing total elapsed)
+
