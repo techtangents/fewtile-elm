@@ -43,3 +43,13 @@ easingTile' easing total elapsed tile tile' =
 easingTiles' easing total elapsed =
   liftList2 (easingTile' easing total elapsed)
 
+
+-- easingBoard :: Easing -> Number -> Number -> Board -> Board
+easingBoard easing total elapsed board =
+  if elapsed < total
+    then let { src  = srcTiles board
+             ; dest = destTiles board
+             ; cur = easingTiles' easing total elapsed src dest
+             }
+          in Animating src cur dest
+    else board

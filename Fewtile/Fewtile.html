@@ -315,86 +315,95 @@ Elm.Fewtile.Easing=function(){
  var floatCeil_3=function(x){
   return toFloat(ceiling(x));};
  var linear_4=Easing_0(id);
- var exponential_5=Easing_0(function(x_15){
-  return (x_15*x_15);});
- var inverse_6=Easing_0(function(x_16){
-  return floatCeil_3((1/x_16));});
- function beas_2(f_14){
+ var exponential_5=Easing_0(function(x_16){
+  return (x_16*x_16);});
+ var inverse_6=Easing_0(function(x_17){
+  return floatCeil_3((1/x_17));});
+ function beas_2(f_15){
   return Easing_0(function(x){
-   return bound_1(f_14(x));});};
- function easingPercent_7(Easing$f_17){
-  return function(total_18){
-   return function(elapsed_19){
+   return bound_1(f_15(x));});};
+ function easingPercent_7(Easing$f_18){
+  return function(total_19){
+   return function(elapsed_20){
     return function(){
-    switch(Easing$f_17[0]){
+    switch(Easing$f_18[0]){
      case "Easing":
-     return Easing$f_17[1]((elapsed_19/total_18));
+     return Easing$f_18[1]((elapsed_20/total_19));
     }
     throw "Non-exhaustive pattern match in case";}();};};};
- function easingNum_8(curPc_21){
-  return function(src_22){
-   return function(dest_23){
-    return (src_22+(curPc_21*(dest_23-src_22)));};};};
- function easingPair_9(curPc_24){
-  return function(Tuple2$xy_25){
-   return function(Tuple2$x_y__26){
+ function easingNum_8(curPc_22){
+  return function(src_23){
+   return function(dest_24){
+    return (src_23+(curPc_22*(dest_24-src_23)));};};};
+ function easingPair_9(curPc_25){
+  return function(Tuple2$xy_26){
+   return function(Tuple2$x_y__27){
     return function(){
-    switch(Tuple2$xy_25[0]){
+    switch(Tuple2$xy_26[0]){
      case "Tuple2":
      return function(){
-     switch(Tuple2$x_y__26[0]){
+     switch(Tuple2$x_y__27[0]){
       case "Tuple2":
-      return ["Tuple2",easingNum_8(curPc_24)(Tuple2$xy_25[1])(Tuple2$x_y__26[1]),easingNum_8(curPc_24)(Tuple2$xy_25[2])(Tuple2$x_y__26[2])];
+      return ["Tuple2",easingNum_8(curPc_25)(Tuple2$xy_26[1])(Tuple2$x_y__27[1]),easingNum_8(curPc_25)(Tuple2$xy_26[2])(Tuple2$x_y__27[2])];
      }
      throw "Non-exhaustive pattern match in case";}();
     }
     throw "Non-exhaustive pattern match in case";}();};};};
- function easingColor_10(curPc_31){
-  return function(Color$rgba_32){
-   return function(Color$r_g_b_a__33){
+ function easingColor_10(curPc_32){
+  return function(Color$rgba_33){
+   return function(Color$r_g_b_a__34){
     return function(){
-    switch(Color$rgba_32[0]){
+    switch(Color$rgba_33[0]){
      case "Color":
      return function(){
-     switch(Color$r_g_b_a__33[0]){
+     switch(Color$r_g_b_a__34[0]){
       case "Color":
       return function(){
-       var en_42=easingNum_8(curPc_31);
-       return Color(en_42(Color$rgba_32[1])(Color$r_g_b_a__33[1]))(en_42(Color$rgba_32[2])(Color$r_g_b_a__33[2]))(en_42(Color$rgba_32[3])(Color$r_g_b_a__33[3]))(en_42(Color$rgba_32[4])(Color$r_g_b_a__33[4]));}();
+       var en_43=easingNum_8(curPc_32);
+       return Color(en_43(Color$rgba_33[1])(Color$r_g_b_a__34[1]))(en_43(Color$rgba_33[2])(Color$r_g_b_a__34[2]))(en_43(Color$rgba_33[3])(Color$r_g_b_a__34[3]))(en_43(Color$rgba_33[4])(Color$r_g_b_a__34[4]));}();
      }
      throw "Non-exhaustive pattern match in case";}();
     }
     throw "Non-exhaustive pattern match in case";}();};};};
- function easingTile_11(curPc_43){
-  return function(Tile$idtextoriginsizecolor_44){
-   return function(Tile$__origin_size_color__45){
+ function easingTile_11(curPc_44){
+  return function(Tile$idtextoriginsizecolor_45){
+   return function(Tile$__origin_size_color__46){
     return function(){
-    switch(Tile$idtextoriginsizecolor_44[0]){
+    switch(Tile$idtextoriginsizecolor_45[0]){
      case "Tile":
      return function(){
-     switch(Tile$__origin_size_color__45[0]){
+     switch(Tile$__origin_size_color__46[0]){
       case "Tile":
       return function(){
-       var ep_54=easingPair_9(curPc_43);
-       return Tile(Tile$idtextoriginsizecolor_44[1])(Tile$idtextoriginsizecolor_44[2])(ep_54(Tile$idtextoriginsizecolor_44[3])(Tile$__origin_size_color__45[3]))(ep_54(Tile$idtextoriginsizecolor_44[4])(Tile$__origin_size_color__45[4]))(easingColor_10(Tile$idtextoriginsizecolor_44[5])(Tile$__origin_size_color__45[5]));}();
+       var ep_55=easingPair_9(curPc_44);
+       return Tile(Tile$idtextoriginsizecolor_45[1])(Tile$idtextoriginsizecolor_45[2])(ep_55(Tile$idtextoriginsizecolor_45[3])(Tile$__origin_size_color__46[3]))(ep_55(Tile$idtextoriginsizecolor_45[4])(Tile$__origin_size_color__46[4]))(easingColor_10(Tile$idtextoriginsizecolor_45[5])(Tile$__origin_size_color__46[5]));}();
      }
      throw "Non-exhaustive pattern match in case";}();
     }
     throw "Non-exhaustive pattern match in case";}();};};};
- function easingTile__12(easing_55){
-  return function(total_56){
-   return function(elapsed_57){
-    return function(tile_58){
-     return function(tile__59){
-      return easingTile_11(easingPercent_7(easing_55)(total_56)(elapsed_57))(tile_58)(tile__59);};};};};};
- function easingTiles__13(easing_60){
-  return function(total_61){
-   return function(elapsed_62){
-    return liftList2(easingTile__12(easing_60)(total_61)(elapsed_62));};};};
- return {Easing:Easing_0,bound:bound_1,beas:beas_2,floatCeil:floatCeil_3,linear:linear_4,exponential:exponential_5,inverse:inverse_6,easingPercent:easingPercent_7,easingNum:easingNum_8,easingPair:easingPair_9,easingColor:easingColor_10,easingTile:easingTile_11,easingTile_:easingTile__12,easingTiles_:easingTiles__13};}();
+ function easingTile__12(easing_56){
+  return function(total_57){
+   return function(elapsed_58){
+    return function(tile_59){
+     return function(tile__60){
+      return easingTile_11(easingPercent_7(easing_56)(total_57)(elapsed_58))(tile_59)(tile__60);};};};};};
+ function easingTiles__13(easing_61){
+  return function(total_62){
+   return function(elapsed_63){
+    return liftList2(easingTile__12(easing_61)(total_62)(elapsed_63));};};};
+ function easingBoard_14(easing_64){
+  return function(total_65){
+   return function(elapsed_66){
+    return function(board_67){
+     return ((compare(elapsed_66)(total_65)[0] === 'LT')?function(){
+      var src_68=srcTiles(board_67);
+      var dest_69=destTiles(board_67);
+      var cur_70=easingTiles__13(easing_64)(total_65)(elapsed_66)(src_68)(dest_69);
+      return Animating(src_68)(cur_70)(dest_69);}():board_67);};};};};
+ return {Easing:Easing_0,bound:bound_1,beas:beas_2,floatCeil:floatCeil_3,linear:linear_4,exponential:exponential_5,inverse:inverse_6,easingPercent:easingPercent_7,easingNum:easingNum_8,easingPair:easingPair_9,easingColor:easingColor_10,easingTile:easingTile_11,easingTile_:easingTile__12,easingTiles_:easingTiles__13,easingBoard:easingBoard_14};}();
 Elm.main=function(){
  return Elm.Fewtile.Easing.main;};
-} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Easing module:<br/>' + e + '<br/><br/>The problem may stem from an improper usage of:<br/>Color, Tile, liftList2</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
+} catch (e) {Elm.main=function() {var msg = ('<br/><h2>Your browser may not be supported. Are you using a modern browser?</h2>' + '<br/><span style="color:grey">Runtime Error in Fewtile.Easing module:<br/>' + e + '<br/><br/>The problem may stem from an improper usage of:<br/>Animating, Color, Tile, destTiles, liftList2, srcTiles</span>');document.body.innerHTML = Text.monospace(msg);throw e;};}
 try{
 
 for(var i in Elm) { this[i] = Elm[i]; }
